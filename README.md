@@ -80,7 +80,16 @@ This cryptic site was selected as the **target region for docking**.
 
 <img width="1323" height="661" alt="image" src="https://github.com/user-attachments/assets/1d88d983-a8c4-4192-a3c3-77d06440fd35" />
 
+### **Helical Opening Analysis (Custom COM-Based Method)**
 
+To identify the **most open conformation** associated with the cryptic pocket, we implemented a dedicated analysis script (`helix_opening.py`). The script tracks the **center-of-mass (COM) distances** between predefined transmembrane helices and computes the **mean pairwise COM separation** for every frame of the MD trajectory. This metric captures the *global opening* of the helical bundle, enabling detection of frames where the cryptic pocket is maximally exposed.
+The structure corresponding to the **maximum helix separation** is automatically exported as `most_open_cryptic_pocket.pdb` for downstream visualization and docking.
+
+Run the script via:
+
+```bash
+python3 helix_opening.py
+```
 ---
 
 ## **4. Compound Library Preparation (ZINC Database)**
