@@ -91,12 +91,12 @@ To dock potential inhibitors, we used the **ZINC** database — a large collecti
 
 To obtain molecules consistent with expected inhibitor size and physicochemical properties, we filtered entries based on:
 
-* **Heavy atom count (HAC): 19–30 (H19–H30)**
-* **Partition coefficient proxy (P): P40–P800**
+* **Heavy atom count (HAC):  (H20–H29)**
+* **Partition coefficient proxy (P): P100–P600**
 
 This filtering produced a **7 billion-compound subset** suitable for screening.
 
-We then sampled **150,000 random molecules** using:
+We then sampled **123,282 random molecules** using:
 
 ```bash
 python3 zinc_sampler.py
